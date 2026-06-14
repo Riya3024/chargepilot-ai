@@ -161,6 +161,6 @@ npm run dev
 ## Clone Repository
 
 
-git clone https://github.com/yourusername/chargepilot-ai.git
+git clone https://github.com/Riya3024/chargepilot-ai.git
 
 
