@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+*.env
+
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build files
+frontend/dist/
+dist/
+build/
+
+
+# Logs
+*.log
+
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# IDE
+.vscode/
+.idea/
+
+
+# Docker
+docker-compose.yml
+
+
+# Cache
+.cache/
+*.cache
+
+
+# Database
+*.sqlite
+*.db
