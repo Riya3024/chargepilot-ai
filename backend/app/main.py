@@ -100,9 +100,9 @@ app.include_router(
     tags=["Fleet Health"]
 )
 
-@app.get("/")
-def root():
-    return {"message": "ChargePilot AI API Running"}
+#@app.get("/")
+#def root():
+#   return {"message": "ChargePilot AI API Running"}
 
 
 import os
@@ -111,18 +111,25 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 
-
 if os.path.exists("static"):
 
     app.mount(
-        "/static",
-        StaticFiles(directory="static"),
-        name="static"
+        "/assets",
+        StaticFiles(directory="static/assets"),
+        name="assets"
     )
 
 
-    @app.get("/{path:path}")
-    def frontend(path: str):
+    @app.api_route("/", methods=["GET", "HEAD"])
+    def serve_frontend():
+
+        return FileResponse(
+            "static/index.html"
+        )
+
+
+    @app.api_route("/{path:path}", methods=["GET", "HEAD"])
+    def serve_react(path: str):
 
         return FileResponse(
             "static/index.html"
